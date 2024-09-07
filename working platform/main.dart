@@ -1,5 +1,5 @@
 void main() {
-  List namelist = ['Ali', 'Bilal', 'AbdulRafay', 'Faizan'];
+  List namelist = ['fahema', 'hanne', 'ammaira'];
   print(namelist);
   List dayslist = [
     'Sunday',
@@ -12,11 +12,11 @@ void main() {
   ];
   print(dayslist.elementAt(0));
   Map studentinfo = {
-    'Name': 'Mahad',
-    'Class': 8,
-    'Rollno': 5,
-    'Grade': 'A',
-    'Persentage': 85
+    'Name': 'Maida',
+    'Class': 7,
+    'Rollno': 23,
+    'Grade': 'C',
+    'Persentage': 43
   };
   print(studentinfo);
   List number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];

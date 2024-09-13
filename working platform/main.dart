@@ -1,67 +1,48 @@
 void main() {
-  List namelist = ['fahema', 'hanne', 'ammaira'];
-  print(namelist);
-  List dayslist = [
-    'Sunday',
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday',
-    'Saturday'
-  ];
-  print(dayslist.elementAt(0));
-  Map studentinfo = {
-    'Name': 'Maida',
-    'Class': 7,
-    'Rollno': 23,
-    'Grade': 'C',
-    'Persentage': 43
+  // Create the map with the given key-value pairs
+  Map<String, dynamic> car = {
+    'brand': 'Toyota',
+    'color': 'Red',
+    'isSedan': true,
   };
-  print(studentinfo);
-  List number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  print(number.first);
-  print(number.last);
-  List<int> numbers = [10, 5, 100, 3, 47];
 
-  // Check if the list is not empty
-  if (numbers.isEmpty) {
-    print('The list is empty.');
-    return;
+  // Check if the car is a sedan and red in color
+  if (car['isSedan'] == true && car['color'] == 'Red') {
+    print('Match');
+  } else {
+    print('No match');
+  }
+  Map<String, dynamic> user = {
+    'name': 'Alice',
+    'isAdmin': true,
+    'isActive': true,
+  };
+
+  // Check if the user is both an admin and active
+  if (user['isAdmin'] == true && user['isActive'] == true) {
+    print('Active admin');
+  } else {
+    print('Not an active admin');
+  }
+  int number = 5;
+
+  // Print the multiplication table
+  for (int i = 1; i <= 10; i++) {
+    print('$number x $i = ${number * i}');
+  }
+  // Define the list of numbers
+  List<int> numbers = [3, 9, 1, 6, 4, 2, 8, 5, 7];
+
+  // Initialize the largest element with the first element of the list
+  int largest = numbers[0];
+
+  // Iterate through the list to find the largest element
+  for (int i = 1; i < numbers.length; i++) {
+    if (numbers[i] > largest) {
+      largest = numbers[i];
+    }
   }
 
-  // Use the reduce method to find the maximum value
-  int maxNumber = numbers.reduce((a, b) => a > b ? a : b);
-
-  print('The maximum value is: $maxNumber');
-  List<String> originallist = ['apple', 'mango', 'banana'];
-  List<String> reversedList = originallist.reversed.toList();
-  print('originallist;$originallist');
-  print('reversedList:$reversedList');
-  filterPositiveNumbers(List<int> numbers) {
-    // Use the where() method to filter out negative numbers
-    List<int> positiveNumbers = numbers.where((number) => number >= 0).toList();
-
-    // Print the new list containing only positive numbers
-    print('Positive numbers: $positiveNumbers');
-  }
-
-  // Example list of integers
-  List<int> originalList = [10, -5, 7, -3, 12, -8];
-
-  // Call the function with the original list
-  filterPositiveNumbers(originalList);
-  List<String> usersEligibility = [
-    'John',
-    'Alice',
-    'eligible',
-    'Mike',
-    'Sarah',
-    'Tom'
-  ];
-
-  // Remove all values that are not 'eligible'
-  usersEligibility.removeWhere((user) => user != 'eligible');
-
-  print('Filtered list: $usersEligibility');
+  // Print the largest element
+  print('Largest element: $largest');
 }

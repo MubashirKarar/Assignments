@@ -72,7 +72,15 @@ void main() {
   print("Expenses: $expenses");
 
   // Q8
-
+List<Map<String, bool>> usersEligibility = [
+    {'name':  'eligible': true},
+    {'name':  'eligible': false},
+    {'name':  'eligible': true},
+    {'name':  'eligible': true},
+    {'name':  'eligible': false},
+  ];
+  usersEligibility.removeWhere((user) => !user['eligible']!);
+  print("Eligible users: $usersEligibility");
   // Q9
   List<int> intList = [5, 2, 8, 1, 9];
   int maxValue = intList.reduce((a, b) => a > b ? a : b);
